@@ -1,0 +1,40 @@
+.ContainerDivsImagen {
+  display: flex;
+  justify-content: center;
+}
+
+.ContainerProducto {
+  margin-left: 200px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+img {
+  width: 500px;
+}
+
+.ContainerImagen {
+  width: fit-content;
+  display: flex;
+}
+
+.Imagen {
+  width: 50px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+a {
+  margin: 10px;
+}
+
+.ImagenSeleccionada {
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.ImagenNoSeleccionada {
+  opacity: 0.5;
+  border: 1px solid black;
+  border-radius: 5px;
+}

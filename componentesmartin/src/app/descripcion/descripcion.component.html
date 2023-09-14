@@ -1,0 +1,81 @@
+<div class="ContainerProducto">
+  <!--------Nombre del Producto----------->
+
+  <h2>MONITOR 55 SAMSUNG ODYSSEY ARK CURVO 1000R 4K 1MS 165HZ</h2>
+  <p>MODELO: LS55BG970NL | GTIN: 8806094414868</p>
+
+  <!----------------------------------Si la imagen no existe colocamos una predeterminada------------------------------------>
+
+  <img
+    *ngIf="!Imagen.length"
+    src="https://www.venex.com.ar/products_images/1673351447_odissey-5.png"
+  />
+
+  <!----------------------------------Si la imagen  existe colocamos la que vamos a seleccionar------------------------------------>
+
+  <img *ngIf="Imagen.length" [src]="Imagen" />
+
+  <!---------Iteracion de cada producto------------>
+
+  <div class="ContainerDivsImagen">
+    <div class="ContainerImagen">
+      <ng-container *ngFor="let imagen of imagenesProducto">
+        <a (click)="CambioDeImagen(imagen)">
+          <img
+            ngClass="{{
+              imagen === Imagen ? 'ImagenSeleccionada' : 'ImagenNoSeleccionada'
+            }}"
+            class="Imagen"
+            [src]="imagen"
+          />
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+  <!----Precio del producto----->
+
+  <h2>$ 2219999</h2>
+
+  <!-----------Description del producto------------->
+
+  <hr />
+  <h2>Descripción :</h2>
+  <p>
+    -Pantalla tamaño (clase): 55 -Plano / Curvo: Curvo -Curvatura: 1000R
+    -Resolución: 3,840 x 2,160 -Frecuencia de actualización: Max 165Hz -HDMI: 4
+    EA -Entrada de Audio: No -Auriculares: Sí -USB Hub: 2 -LAN inalámbrica
+    incorporada: WiFi5 -Bluetooth: BT5.2 -Altavoz: Sí -dimensión con soporte
+    (WxHxD): 1174.8 x 1102.0 x 379.0 mm Una nueva era de inmersión Tecnología
+    Quantum Matrix Una experiencia visual sin precedentes. Por una parte, la
+    revolucionaria tecnología Quantum Matrix con mini LEDs Quantum crea el
+    brillo y el contraste perfecto. Y, de la calidad de imagen también se
+    encarga su unidad de retroiluminación de 14 bits, que permite un control
+    detallado del HDR. El control lo tenés vos Cockpit Mode & Eclipse Lighting
+    Te vas a sentir como en una cabina de mando. Girá la pantalla al Modo
+    Cockpit con la función HAS de inclinación y pivote hasta tener el monitor a
+    tu gusto. Este posicionamiento crea una nueva sensación de inmersión que se
+    ve mejorada con la iluminación "Eclipse". Capturá cada detalle, derrotá a
+    tus enemigos HDR 10+ gaming Mirá cada detalle con todo su esplendor. Desde
+    las sombras más tenebrosas hasta las escenas quemadas por el sol, la
+    relación de contraste de 1.000.000:1 permite mejorar la expresión y la
+    profundidad del color, ¡toda una ventaja competitiva con HDR 10+! Otra
+    virtud es que adapta automáticamente los juegos, en tiempo real, para que
+    puedas apreciar todos los detalles y te hagan sumar otra victoria.
+  </p>
+  <br />
+  <br />
+
+  <!------------Caracteristicas del producto---------------->
+
+  <hr />
+  <h2>Características :</h2>
+
+  <h5><fa-icon [icon]="faTelevision"></fa-icon> PANEL TIPO: VA</h5>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <hr />
+</div>
